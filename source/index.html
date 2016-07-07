@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>dashboard</title>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="resource/ae/dashboard/dashboards.css" />
+	<link rel="stylesheet" type="text/css" href="resource/ae/dashboard/widgets.css" />
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.css" />
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons-wind.css" />
+	
+	<style type="text/css">
+		html { height: 100%; }
+		body {
+		    height:100%;
+		    margin:0px;
+		    padding:0px
+		}
+		#header {
+		    height:50px;
+		    width:100%;
+		    background: #555;
+		    color:#EEE;
+		    padding-top:5px;
+		    padding-left:15px;
+		    font-size:20px;		    
+		}
+		#dashboard {
+			/*height: auto;*/
+		    width: 100%;
+		    position: absolute;
+		    top: 40px;
+		    background: #EEE;
+		    bottom: 0;
+		}
+	</style>
+</head>
+<body>
+	<div id="header"><b>Dashboard</b></div>
+	<div id="dashboard"></div>
+	
+	<script src="https://cdn.plot.ly/plotly-1.9.0.min.js"></script>
+	<script src="resource/ae/dashboard/index.js"></script> 
+	<script src="resource/ae/dashboard/moment.js"></script> 
+	<script src="resource/ae/dashboard/widget.js"></script> 
+	<script src="resource/ae/dashboard/datasource.js"></script>
+	<script src="resource/ae/dashboard/spint.min.js"></script>
+	<script type="text/javascript" src="script/ae.dashboard.js"></script>
+</body>
+</html>

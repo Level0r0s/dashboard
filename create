@@ -1,0 +1,1 @@
+python create-application.py --name dashboard -o ../../ -s ae.dashboard -t inline

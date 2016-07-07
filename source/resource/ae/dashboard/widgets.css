@@ -1,0 +1,44 @@
+.chart-wrapper .chart-stage  {
+  font-weight:bold;
+  text-align:center;
+  font-size:25px;
+  min-height:75px;
+}
+
+.chart-curdate  {
+  font-weight:bold;
+  text-align:center;
+  font-size:25px;
+  margin-bottom:2px;
+}
+
+.chart-wrapper .chart-time  {
+  font-size:12px;
+  text-align:center;
+}
+
+.chart-last  {
+  text-align:center;
+  font-size:12px;
+}
+
+.chart-current  {
+  font-weight:bold;
+  text-align:center;
+  font-size:15px;
+}
+
+.chart-wrapper {
+	height:100%;
+	display:flex;
+	flex-direction: column;
+}
+.chart-wrapper .right{
+  text-align:right;
+}
+
+.cell {
+	flex:1;
+}
+
+
