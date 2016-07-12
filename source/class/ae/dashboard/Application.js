@@ -19,7 +19,7 @@
  * @asset(ae/dashboard/*)
  */
 qx.Class.define("ae.dashboard.Application", {
-	extend : qx.application.Inline,
+	extend : qx.application.Standalone,
 
 	/*
 	 *****************************************************************************
@@ -48,14 +48,7 @@ qx.Class.define("ae.dashboard.Application", {
 				qx.log.appender.Console;
 			}
 
-			var htmlElement = document.getElementById("dashboard");
-
-			var inline = new qx.ui.root.Inline(htmlElement, true, true).set({
-				allowStretchY: true,
-				allowShrinkY: true,
-				allowGrowY: true,
-				backgroundColor:null
-			});
+			var workbench = new qx.ui.container.Composite(new qx.ui.layout.VBox());
 
 			var scroll = new qx.ui.container.Scroll();
 			
@@ -65,15 +58,22 @@ qx.Class.define("ae.dashboard.Application", {
 			// use VBox layout instead of basic
 			container.setLayout(gridlayout);
 
-			inline.setLayout(new qx.ui.layout.VBox());
-			inline.add(scroll,{flex:1})
-			scroll.add(container);			
+			
+			scroll.add(container);	
+			
+			var header = new qx.ui.embed.Html();
+			workbench.add(header);
+			workbench.add(scroll,{flex:1});
+			
+			this.getRoot().add(workbench, {edge:0});
 			
 			var req = new qx.io.request.Xhr(window.location.search.split("=")[1]);
             req.addListener("success", function (e) {
             	
             	
             	var config = JSON.parse(e.getTarget().getResponse());
+            	header.setHtml(config.header);
+            	
             	window.dsconfig=config;
             	
             	container.setPadding(config.layout.ySpacing,config.layout.xSpacing,config.layout.ySpacing,config.layout.xSpacing);
