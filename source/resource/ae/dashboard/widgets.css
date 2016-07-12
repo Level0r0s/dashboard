@@ -1,31 +1,38 @@
-.chart-wrapper .chart-stage  {
+.chart-wrapper {
+  background: #fff;
+  border: 1px solid #e2e2e2;
+  border-radius: 3px;
+  margin-bottom: 10px;
+}
+.chart-wrapper .chart-title {
+  border-bottom: 1px solid #d7d7d7;
+  color: #666;
+  font-size: 14px;
+  font-weight: 200;
+  padding: 7px 10px 4px;
+}
+
+.chart-wrapper .chart-stage {
+  overflow: hidden;
+  padding: 5px 10px;
+  position: relative;
   font-weight:bold;
   text-align:center;
   font-size:25px;
   min-height:75px;
 }
 
-.chart-curdate  {
-  font-weight:bold;
-  text-align:center;
-  font-size:25px;
-  margin-bottom:2px;
+.chart-wrapper .chart-notes {
+  background: #fbfbfb;
+  border-top: 1px solid #e2e2e2;
+  color: #808080;
+  font-size: 12px;
+  padding: 8px 10px 5px;
 }
 
 .chart-wrapper .chart-time  {
   font-size:12px;
   text-align:center;
-}
-
-.chart-last  {
-  text-align:center;
-  font-size:12px;
-}
-
-.chart-current  {
-  font-weight:bold;
-  text-align:center;
-  font-size:15px;
 }
 
 .chart-wrapper {
